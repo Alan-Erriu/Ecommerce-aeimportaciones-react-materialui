@@ -7,7 +7,7 @@ function App() {
      <Navbar/>
      <>
      <Card/>
-     <Card/>
+     
   
      </>
     </div>
