@@ -1,0 +1,8 @@
+.cards{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo{
+    height: 50px;
+}
