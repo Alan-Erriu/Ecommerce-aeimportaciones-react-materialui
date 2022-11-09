@@ -15,6 +15,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import logo from "../assets/logo.jpg"
 import "../App.css"
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Badge } from '@mui/material';
 
 const pages = ['Hombre', 'Mujer', 'Niño'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -39,7 +40,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="fixed">
+    <AppBar className="nav-bar" position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
            
@@ -132,7 +133,9 @@ function ResponsiveAppBar() {
           <IconButton>  <FavoriteIcon/> </IconButton>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <Badge badgeContent={2} color="secondary">
                <ShoppingCartIcon/>
+               </Badge>
               </IconButton>
             </Tooltip>
             <Menu
