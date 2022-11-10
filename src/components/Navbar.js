@@ -17,7 +17,7 @@ import "../App.css"
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Badge } from '@mui/material';
 
-const pages = ['Hombre', 'Mujer', 'Niño'];
+const pages = ['Hombre', 'Mujer', 'Niños'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
