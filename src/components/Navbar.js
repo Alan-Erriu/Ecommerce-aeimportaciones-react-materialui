@@ -16,6 +16,7 @@ import logo from "../assets/logo.jpg"
 import "../App.css"
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Badge } from '@mui/material';
+import { Link } from "react-router-dom";
 
 const pages = ['Hombre', 'Mujer', 'Niños'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -48,7 +49,7 @@ function ResponsiveAppBar() {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href="#"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -59,7 +60,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-          <img className='logo' src={logo}
+          <img className='logo' alt='logo' src={logo}
           component="img"/>
           </Typography>
 
@@ -130,7 +131,8 @@ function ResponsiveAppBar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-          <IconButton>  <FavoriteIcon/> </IconButton>
+          <IconButton><Link to ="/hombres"><FavoriteIcon/></Link>   </IconButton>
+          <IconButton><Link to ="/check"><FavoriteIcon/></Link>   </IconButton>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
               <Badge badgeContent={2} color="secondary">
