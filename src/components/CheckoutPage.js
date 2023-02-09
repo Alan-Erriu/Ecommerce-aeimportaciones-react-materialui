@@ -7,8 +7,8 @@ import { useContext } from "react";
 import { StateContex } from "./contex/CartContex";
 
 export default function CheckoutPage() {
-  const [state, dispatch] = useContext(StateContex);
-  const{basket}=state
+  const [state] = useContext(StateContex);
+  const{cart}=state
     return (
       <>
         <Box className="cards" sx={{ width: "100%" }}>
@@ -21,9 +21,9 @@ export default function CheckoutPage() {
             </Typography>
           </Grid>
           <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-            {basket?.map((product) => (
-              <Grid item xs={12} sm={6} md={4} lg={3}>
-                <ItemCart key={product.id} product={product} />
+            {cart?.map((item,i) => (
+              <Grid key={i}  item xs={12} sm={6} md={4} lg={3}>
+                <ItemCart key={item.id} item={item} />
               </Grid>
             ))}
           </Grid>

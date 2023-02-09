@@ -8,24 +8,17 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import { actionTypes } from "../reducer/recducer";
-import { StateContex, useStateValue } from "../contex/CartContex";
+import { TYPES } from "../reducer/recducer";
+import { StateContex } from "../contex/CartContex";
 import { useContext } from "react";
-export default function RecipeReviewCard({ product: { id, product, type, img, description, price },}) {
-  
-  const [state, dispatch] = useContext(StateContex);
-  
-  
-  const addToBasket=()=>{
-    dispatch({
-     type:actionTypes.ADD_TO_BASKET,
-     item:{
-     id:id,
-     product:product,
-     img:img,
-     price:price,
-     type:type}})
-                      }
+export default function RecipeReviewCard({
+  product: { id, product, type, img, price },
+}) {
+  const [state,dispatch] = useContext(StateContex);
+
+  const addToCart = () => {
+    dispatch({ type: TYPES.ADD_TO_CART, payload: id });
+  };
   return (
     <Card className="card" sx={{ maxWidth: 345 }}>
       <CardHeader
@@ -46,7 +39,7 @@ export default function RecipeReviewCard({ product: { id, product, type, img, de
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton onClick={addToBasket}>
+        <IconButton onClick={addToCart}>
           <AddShoppingCartIcon />
         </IconButton>
       </CardActions>
