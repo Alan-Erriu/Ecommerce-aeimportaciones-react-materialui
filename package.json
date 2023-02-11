@@ -2,7 +2,7 @@
   "name": "ecommerce-runway",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Alan-Erriu.github.io/Ecommerce--comision--0522TM",
+  "homepage": "https://Alan-Erriu.github.io/Ecommerce--comision--0522TM",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -19,8 +19,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
