@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import "../App.css";
 
 import { Badge } from "@mui/material";
@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 import { StateContex } from "./contex/CartContex";
 import { useContext } from "react";
 
-const pages = ["Hombre", "Mujer", "Niños"];
+const pages = ["INTEL", "AMD"];
 
 
 function ResponsiveAppBar() {
@@ -127,7 +127,7 @@ function ResponsiveAppBar() {
           >
               
             <Link to="/hombres">
-               RW
+            <img className="logo" alt="logo" src={logo} component="img" />
               </Link>{" "}
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
