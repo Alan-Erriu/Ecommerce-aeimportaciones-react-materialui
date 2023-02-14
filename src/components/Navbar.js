@@ -44,7 +44,7 @@ function ResponsiveAppBar() {
     <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link to="/">
+          <Link to="/ae.importaciones">
             <Typography
               variant="h6"
               noWrap
@@ -98,10 +98,10 @@ function ResponsiveAppBar() {
               }}
             >
               <MenuItem onClick={handleCloseNavMenu}>
-              <MenuItem component={Link} to={'/check'}>Carrito</MenuItem>
+              <MenuItem component={Link} to={'/carrito'}>Carrito</MenuItem>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-              <MenuItem component={Link} to={'/'}>Home</MenuItem>
+              <MenuItem component={Link} to={'/ae.importaciones'}>Home</MenuItem>
               </MenuItem>
             </Menu>
           </Box>
@@ -119,7 +119,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            <Link to="/">
+            <Link to="/ae.importaciones">
             <Avatar
            alt="Remy Sharp"
            src={logo}
@@ -139,7 +139,7 @@ function ResponsiveAppBar() {
             <Tooltip title="carrito">
               <IconButton>
                 <Badge badgeContent={cart?.length} color="secondary">
-                  <Link to="/check">
+                  <Link to="/carrito">
                     <ShoppingCartIcon />
                   </Link>{" "}
                 </Badge>

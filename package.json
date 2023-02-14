@@ -1,8 +1,8 @@
 {
-  "name": "ecommerce-runway",
+  "name": "ae.importaciones",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://alan-erriu.github.io/Ecommerce--comision--0522TM/",
+  "private": false,
+  "homepage": "https://alan-erriu.github.io/ae.importaciones",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

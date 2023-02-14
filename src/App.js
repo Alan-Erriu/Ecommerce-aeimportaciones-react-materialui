@@ -11,9 +11,9 @@ function App() {
     <div >
       <StateProvider>
         <Navbar />
-         <Routes>
-          <Route path="/" element={<Header />} />
-         <Route path="/check" element={<CheckoutPage />} />
+         <Routes basename="/ae.importaciones">
+          <Route exact path="/ae.importaciones" element={<Header />} />
+         <Route path="/carrito" element={<CheckoutPage />} />
          </Routes>
          <Footer/>
       </StateProvider>
