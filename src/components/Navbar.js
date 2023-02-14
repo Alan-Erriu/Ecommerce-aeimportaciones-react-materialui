@@ -7,34 +7,29 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import logo from "../assets/logo.png";
-import "../App.css";
-
-import { Badge } from "@mui/material";
+import logo from "../assets/logo.jpg";
+import { Avatar, Badge } from "@mui/material";
 import { Link } from "react-router-dom";
 import { StateContex } from "./contex/CartContex";
 import { useContext } from "react";
 
-const pages = ["INTEL", "AMD"];
 
+
+const pages = ["Acera De", "Contacto", "home"];
 
 function ResponsiveAppBar() {
   const [state, dispatch] = useContext(StateContex);
-  const {cart}   = state;
+  const { cart } = state;
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
@@ -46,32 +41,33 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar className="nav-bar" position="fixed">
+    <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          
-        
-              <Link to="/hombres">
+          <Link to="/">
+            <Typography
+              variant="h6"
+              noWrap
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
                 
-          <Typography
-            variant="h6"
-            noWrap
+              }}
+            >
+                   <Avatar
+           alt="Remy Sharp"
+           src={logo}
+           sx={{ width: 56, height: 56 }}
+           />
             
-            
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            <img className="logo" alt="logo" src={logo} component="img" />
-          </Typography>
-              </Link>{" "}
-    
+              
+            </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -101,19 +97,17 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseNavMenu}>
+              <MenuItem component={Link} to={'/check'}>Carrito</MenuItem>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+              <MenuItem component={Link} to={'/'}>Home</MenuItem>
+              </MenuItem>
             </Menu>
           </Box>
-          
           <Typography
             variant="h5"
             noWrap
-            
-          
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -125,30 +119,29 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-              
-            <Link to="/hombres">
-            <img className="logo" alt="logo" src={logo} component="img" />
-              </Link>{" "}
+            <Link to="/">
+            <Avatar
+           alt="Remy Sharp"
+           src={logo}
+           sx={{ width: 56, height: 56 }}
+           />
+            </Link>{" "}
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
-            ))}
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              acerca de
+            </Button>
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="carrito">
-              <IconButton  >
+              <IconButton>
                 <Badge badgeContent={cart?.length} color="secondary">
-                <Link to="/check">
-              <ShoppingCartIcon />
-              </Link>{" "}
+                  <Link to="/check">
+                    <ShoppingCartIcon />
+                  </Link>{" "}
                 </Badge>
               </IconButton>
             </Tooltip>

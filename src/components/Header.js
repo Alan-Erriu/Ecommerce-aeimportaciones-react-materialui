@@ -1,8 +1,15 @@
-import React from 'react'
-import Cards from './Cards/Cards'
+
+import React from "react";
+import Cards from "./Cards/Cards";
 
 export const Header = () => {
   return (
-    <Cards/>
-  )
-}
+    
+      <div>
+
+        <Cards />
+      </div>
+      
+    
+  );
+};

@@ -2,7 +2,7 @@
   "name": "ecommerce-runway",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Alan-Erriu.github.io/Ecommerce--comision--0522TM",
+  "homepage": "https://alan-erriu.github.io/Ecommerce--comision--0522TM/",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",

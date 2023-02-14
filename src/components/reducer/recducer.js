@@ -32,6 +32,38 @@ export const initialState = {
       price: "$ 2.000",
       quantity:0
     },
+    {
+      id: 4,
+      product: "Pad Gamer Genius",
+      type: "Mouse Pad",
+      img: "https://i0.wp.com/noaweb.com.ar/wp-content/uploads/2021/05/1616513651dc787e32dc096ea2f18a13b767409408.jpg?fit=1024%2C1024&ssl=1",
+      price: "$ 2.000",
+      quantity:0
+    },
+    {
+      id: 4,
+      product: "Pad Gamer Genius",
+      type: "Mouse Pad",
+      img: "https://i0.wp.com/noaweb.com.ar/wp-content/uploads/2021/05/1616513651dc787e32dc096ea2f18a13b767409408.jpg?fit=1024%2C1024&ssl=1",
+      price: "$ 2.000",
+      quantity:0
+    },
+    {
+      id: 4,
+      product: "Pad Gamer Genius",
+      type: "Mouse Pad",
+      img: "https://i0.wp.com/noaweb.com.ar/wp-content/uploads/2021/05/1616513651dc787e32dc096ea2f18a13b767409408.jpg?fit=1024%2C1024&ssl=1",
+      price: "$ 2.000",
+      quantity:0
+    },
+    {
+      id: 4,
+      product: "Pad Gamer Genius",
+      type: "Mouse Pad",
+      img: "https://i0.wp.com/noaweb.com.ar/wp-content/uploads/2021/05/1616513651dc787e32dc096ea2f18a13b767409408.jpg?fit=1024%2C1024&ssl=1",
+      price: "$ 2.000",
+      quantity:0
+    },
   ],
   cart: [],
 };

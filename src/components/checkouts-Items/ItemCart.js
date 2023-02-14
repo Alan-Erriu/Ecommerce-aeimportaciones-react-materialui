@@ -9,6 +9,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { TYPES } from "../reducer/recducer";
 import { useContext } from "react";
 import { StateContex } from "../contex/CartContex";
+import { height } from "@mui/system";
 
 export default function ItemCart({ item: { product, type, img, price,quantity,id } }) {
   const [state, dispatch] = useContext(StateContex);
@@ -23,20 +24,24 @@ export default function ItemCart({ item: { product, type, img, price,quantity,id
   };
 
   return (
-    <Card className="card" sx={{ maxWidth: 345 }}>
+    <Card className="card" sx={{ width: 345, height:500}}>
+      <CardContent>
       <CardHeader title={product} subheader={type} />
       <CardMedia component="img" height="250" image={img} alt="zapatilla" />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          {price}
-        </Typography>
-      </CardContent>
       <CardActions disableSpacing>
         <IconButton onClick={delFromCart}>
           <DeleteIcon />
         </IconButton>
-        <span>{quantity}</span>
+        <Typography variant="body2" color="green">
+          {price}
+           
+        </Typography>
+        <Typography variant="body4" color="text.secondary">
+        { `X ${quantity}` }
+           
+        </Typography>
       </CardActions>
+      </CardContent>
     </Card>
   );
 }
