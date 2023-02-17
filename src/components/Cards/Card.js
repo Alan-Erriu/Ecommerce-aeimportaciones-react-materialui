@@ -21,38 +21,29 @@ export default function RecipeReviewCard({
     dispatch({ type: TYPES.ADD_TO_CART, payload: id });
   };
   return (
-    <Card
-      
-      sx={{ width: 345, height: 600}}
-    >
-      <CardHeader
-        // aca va el precio
+    <Card sx={{ width: 345, height: 600 }}>
+      <CardHeader title={product} subheader={type} />
 
-        title={product}
-        subheader={type}
-      />
-      {/* aca va la imagen */}
       <CardContent>
-      <CardMedia component="img" height="250" image={img} alt="zapatilla" />
+        <CardMedia component="img" height="250" image={img} alt="zapatilla" />
         <Typography variant="body1" color="text.primary">
           Lo que tenes que saber de este producto
-         <ul>
-          <li>Tipo de teclado: membrana.</li>
-          <li>Con conector USB 2.0.</li>
-          <li>Luces led: No</li>
+          <ul>
+            <li>Tipo de teclado: membrana.</li>
+            <li>Con conector USB 2.0.</li>
+            <li>Luces led: No</li>
           </ul>
         </Typography>
-      
-      <CardActions disableSpacing>
-        <IconButton onClick={addToCart}>
-          <AddShoppingCartIcon />
-        </IconButton>
-        <Typography variant="body1" color="green">
-          {price}
-        </Typography>
-      </CardActions>
+
+        <CardActions disableSpacing>
+          <IconButton onClick={addToCart}>
+            <AddShoppingCartIcon />
+          </IconButton>
+          <Typography variant="body1" color="green">
+            {price}
+          </Typography>
+        </CardActions>
       </CardContent>
-      
     </Card>
   );
 }

@@ -1,18 +1,24 @@
 import Navbar from "./components/Navbar";
-
-import { Header } from "./components/Header";
+import  KeyboardsPage  from "./components/KeyboardsPage"
 import { StateProvider } from "./components/contex/CartContex";
 import CheckoutPage from "./components/CheckoutPage";
 import {Route, Routes} from "react-router-dom"
 import Footer from "./components/Footer";
+import  Home from "./components/Home"
+import MousesPage from "./components/MousesPage";
+import AccessoriesPage from "./components/AccessoriesPage";
 
 function App() {
   return (
     <div >
       <StateProvider>
         <Navbar />
-         <Routes basename="/ae.importaciones">
-          <Route exact path="/ae.importaciones" element={<Header />} />
+        
+         <Routes basename="/">
+          <Route exact path="/" element={<Home />} />
+          <Route  path="/teclados" element={<KeyboardsPage />} />
+          <Route  path="/mouses" element={<MousesPage/>} />
+          <Route  path="/accesorios" element={<AccessoriesPage />} />
          <Route path="/carrito" element={<CheckoutPage />} />
          </Routes>
          <Footer/>

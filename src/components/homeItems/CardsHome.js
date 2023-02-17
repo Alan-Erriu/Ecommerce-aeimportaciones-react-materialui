@@ -1,32 +1,30 @@
-import Card from "./Card";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import CardHome from "../homeItems/CardHome"
 import { StateContex } from "../contex/CartContex";
 import { useContext } from "react";
 
+
 export default function Cards() {
-  const [state, dispatch] = useContext(StateContex);
-  const { products } = state;
+    const [state, dispatch] = useContext(StateContex);
+    const { offers } = state;
   return (
-    <Box
-    sx={{marginTop:"7rem"}}
-      
-    >
+    <Box sx={{ marginTop: "7rem", alignItems:"center", justifyContent:"center" }}>
       <Grid
         container
         rowSpacing={2}
-        columnSpacing={{ xs: 0, sm: 10, md: 2, lg: 4, xl: 3 }}
+        columnSpacing={{ xs: 0, sm: 10, md: 2, lg: 0, xl: 0 }}
       >
-        {products.map((product) => (
+        {offers.map((offert) => (
           <Grid
-            key={product.id}
-            product={product}
+            key={offert.id}
+            offert={offert}
             item
             xs={12}
             sm={6}
-            md={6}
+            md={4}
             lg={4}
-            xl={3}
+            xl={4}
           >
             <Box sx={{
         width: "100%",
@@ -35,7 +33,9 @@ export default function Cards() {
         alignItems: "center",
         xs: "colunm",
       }}>
-              <Card key={product.id} product={product} />
+                          
+              <CardHome key={offert.id} offert={offert} />
+              
             </Box>
           </Grid>
         ))}

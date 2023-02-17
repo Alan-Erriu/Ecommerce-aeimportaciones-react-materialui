@@ -1,23 +1,27 @@
-import Card from "./Card";
+import Card from "./Cards/Card"
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import { StateContex } from "../contex/CartContex";
+import { StateContex } from "../components/contex/CartContex";
 import { useContext } from "react";
 
-export default function Cards() {
+
+
+export const KeyboardsPage = () => {
   const [state, dispatch] = useContext(StateContex);
   const { products } = state;
+
+  const keyboards = products.filter((keyboards) => keyboards.type === "Teclados");
+
+
+
   return (
-    <Box
-    sx={{marginTop:"7rem"}}
-      
-    >
+    <Box sx={{ marginTop: "7rem" }}>
       <Grid
         container
         rowSpacing={2}
         columnSpacing={{ xs: 0, sm: 10, md: 2, lg: 4, xl: 3 }}
       >
-        {products.map((product) => (
+        {keyboards.map((product) => (
           <Grid
             key={product.id}
             product={product}
@@ -28,13 +32,15 @@ export default function Cards() {
             lg={4}
             xl={3}
           >
-            <Box sx={{
-        width: "100%",
-        justifyContent: "center",
-        display: "flex",
-        alignItems: "center",
-        xs: "colunm",
-      }}>
+            <Box
+              sx={{
+                width: "100%",
+                justifyContent: "center",
+                display: "flex",
+                alignItems: "center",
+                xs: "colunm",
+              }}
+            >
               <Card key={product.id} product={product} />
             </Box>
           </Grid>
@@ -42,4 +48,5 @@ export default function Cards() {
       </Grid>
     </Box>
   );
-}
+};
+export default KeyboardsPage;

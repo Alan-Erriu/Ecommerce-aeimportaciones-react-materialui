@@ -17,16 +17,11 @@ import { Link } from "react-router-dom";
 import { StateContex } from "./contex/CartContex";
 import { useContext } from "react";
 
-
-
-const pages = ["Acera De", "Contacto", "home"];
-
 function ResponsiveAppBar() {
   const [state, dispatch] = useContext(StateContex);
   const { cart } = state;
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -36,15 +31,11 @@ function ResponsiveAppBar() {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
     <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Link to="/ae.importaciones">
+          <Link to="/">
             <Typography
               variant="h6"
               noWrap
@@ -56,16 +47,13 @@ function ResponsiveAppBar() {
                 letterSpacing: ".3rem",
                 color: "inherit",
                 textDecoration: "none",
-                
               }}
             >
-                   <Avatar
-           alt="Remy Sharp"
-           src={logo}
-           sx={{ width: 56, height: 56 }}
-           />
-            
-              
+              <Avatar
+                alt="ae.importaciones"
+                src={logo}
+                sx={{ width: 56, height: 56 }}
+              />
             </Typography>
           </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -98,10 +86,19 @@ function ResponsiveAppBar() {
               }}
             >
               <MenuItem onClick={handleCloseNavMenu}>
-              <MenuItem component={Link} to={'/carrito'}>Carrito</MenuItem>
+                <MenuItem component={Link} to={"/"}>
+                  Home
+                </MenuItem>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
-              <MenuItem component={Link} to={'/ae.importaciones'}>Home</MenuItem>
+                <MenuItem component={Link} to={"/teclados"}>
+                  Productos
+                </MenuItem>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem component={Link} to={"/carrito"}>
+                  Carrito
+                </MenuItem>
               </MenuItem>
             </Menu>
           </Box>
@@ -119,29 +116,50 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            <Link to="/ae.importaciones">
-            <Avatar
-           alt="Remy Sharp"
-           src={logo}
-           sx={{ width: 56, height: 56 }}
-           />
-            </Link>{" "}
+            <Link to="/">
+              <Avatar
+                alt="Remy Sharp"
+                src={logo}
+                sx={{ width: 56, height: 56 }}
+              />
+            </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: "white", display: "block" }}
-            >
-              acerca de
-            </Button>
+            <Link to="/teclados" style={{ textDecoration: "none" }}>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                Teclados
+              </Button>
+            </Link>
+            <Link to="/mouses" style={{ textDecoration: "none" }}>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                Mouses
+              </Button>
+            </Link>
+            <Link to="/accesorios" style={{ textDecoration: "none" }}>
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: "white", display: "block" }}
+              >
+                Accesorios
+              </Button>
+            </Link>
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="carrito">
               <IconButton>
                 <Badge badgeContent={cart?.length} color="secondary">
-                  <Link to="/carrito">
+                  <Link
+                    to="/carrito"
+                    style={{ padding: 5, textDecoration: "none" }}
+                  >
                     <ShoppingCartIcon />
-                  </Link>{" "}
+                  </Link>
                 </Badge>
               </IconButton>
             </Tooltip>
