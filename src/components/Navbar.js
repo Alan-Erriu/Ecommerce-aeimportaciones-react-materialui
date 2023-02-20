@@ -152,16 +152,19 @@ function ResponsiveAppBar() {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="carrito">
-              <IconButton>
-                <Badge badgeContent={cart?.length} color="secondary">
+              
                   <Link
                     to="/carrito"
-                    style={{ padding: 5, textDecoration: "none" }}
+                    style={{ textDecoration: "none" }}
                   >
+                <Badge badgeContent={cart?.length} color="secondary">
+                    <Button color="success">
+
                     <ShoppingCartIcon />
-                  </Link>
+                    </Button>
                 </Badge>
-              </IconButton>
+                  </Link>
+              
             </Tooltip>
           </Box>
         </Toolbar>

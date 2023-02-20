@@ -13,7 +13,6 @@ export default function CheckoutPage() {
     <>
       
      
-
       <Box sx={{ marginTop: "5rem",minHeight:"47vh"}}>
         <Total />
         <Grid

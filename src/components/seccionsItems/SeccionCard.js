@@ -6,11 +6,11 @@ import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { TYPES } from "../reducer/recducer";
 import { StateContex } from "../contex/CartContex";
 import { useContext } from "react";
+import { Button } from "@mui/material";
 
 export default function RecipeReviewCard({
   product: { id, product, type, img, price },
@@ -27,21 +27,36 @@ export default function RecipeReviewCard({
       <CardContent>
         <CardMedia component="img" height="250" image={img} alt="zapatilla" />
         <Typography variant="body1" color="text.primary">
-          Lo que tenes que saber de este producto
-          <ul>
-            <li>Tipo de teclado: membrana.</li>
-            <li>Con conector USB 2.0.</li>
-            <li>Luces led: No</li>
-          </ul>
+          Lo que tenes que saber de este producto:
+        </Typography>
+        <Typography variant="body1" color="text.primary">
+          <br />
+          Tipo de teclado: membrana.
+          <br />
+          Con conector USB 2.0.
+          <br />
+          Luces led: No
         </Typography>
 
+        <Typography variant="body1" color="green">
+          {price}
+        </Typography>
         <CardActions disableSpacing>
-          <IconButton onClick={addToCart}>
-            <AddShoppingCartIcon />
-          </IconButton>
-          <Typography variant="body1" color="green">
-            {price}
-          </Typography>
+          
+            <Button
+            onClick={addToCart}
+            sx={{
+              ':hover': {
+                bgcolor: 'success.main', // theme.palette.primary.main
+                
+              },
+            }}
+            startIcon={<AddShoppingCartIcon/>} 
+            variant="contained"
+             color="primary">
+              SUMAR AL CARRITO
+            </Button>
+          
         </CardActions>
       </CardContent>
     </Card>

@@ -20,6 +20,7 @@ export default function GuestFooter() {
             justifyContent: "center",
             display: "flex",
             my: 1,
+            
           }}
         >
           <Typography variant="caption" color="initial" textAlign="center">

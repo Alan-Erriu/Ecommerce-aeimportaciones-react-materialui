@@ -1,8 +1,9 @@
-import Card from "./Cards/Card"
+import SeccionCard from "./seccionsItems/SeccionCard"
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { StateContex } from "../components/contex/CartContex";
 import { useContext } from "react";
+import BannerSeccions from "./banner/BannerSeccions"
 
 
 
@@ -15,6 +16,8 @@ export const KeyboardsPage = () => {
 
 
   return (
+    <>
+    <BannerSeccions/>
     <Box sx={{ marginTop: "7rem" }}>
       <Grid
         container
@@ -41,12 +44,13 @@ export const KeyboardsPage = () => {
                 xs: "colunm",
               }}
             >
-              <Card key={product.id} product={product} />
+              <SeccionCard key={product.id} product={product} />
             </Box>
           </Grid>
         ))}
       </Grid>
     </Box>
+    </>
   );
 };
 export default KeyboardsPage;

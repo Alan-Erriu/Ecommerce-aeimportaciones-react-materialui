@@ -1,8 +1,9 @@
-import Card from "./Cards/Card"
+import SeccionCard from "./seccionsItems/SeccionCard"
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { StateContex } from "../components/contex/CartContex";
 import { useContext } from "react";
+import BannerSeccions from "./banner/BannerSeccions";
 
 const AccessoriesPage = () => {
   const [state, dispatch] = useContext(StateContex);
@@ -11,7 +12,9 @@ const AccessoriesPage = () => {
  const accessories = products.filter(item=> item.type ==="Accesorios")
 
   return (
-    <Box sx={{ marginTop: "7rem" }}>
+    <>
+    <BannerSeccions/>
+    <Box sx={{ marginTop: "7rem" }}>   
       <Grid
         container
         rowSpacing={2}
@@ -36,7 +39,7 @@ const AccessoriesPage = () => {
           alignItems: "center",
           xs: "colunm",
         }}>
-                <Card key={product.id} product={product} />
+                <SeccionCard key={product.id} product={product} />
               </Box>
             </Grid>
           ))}
@@ -44,6 +47,7 @@ const AccessoriesPage = () => {
      
       </Grid>
     </Box>
+    </>
   );
 };
 

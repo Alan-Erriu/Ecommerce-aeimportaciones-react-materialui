@@ -10,26 +10,27 @@ export default function MultiActionAreaCard({
     offert: { id, product, img, price,link }
 }) {
   return (
-    <Card sx={{ width:450 ,height: 350, marginTop: 10}}>
+    <Card sx={{ width:450 ,height: 420, marginTop: 10}}>
+          <CardContent>
       <CardActionArea>
         <Link to={link} style={{textDecoration: 'none'}}>
         <CardMedia
           component="img"
-          height="240"
+          height="280"
           image={img}
           alt={product}
           
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {product}
+          <Typography textAlign={"center"} gutterBottom variant="h5" component="div">
+            {product}  Desde los 
           </Typography>
-          <Typography variant="body2" color="text.secondary">
-           Desde los {price}
+          <Typography textAlign={"center"} gutterBottom variant="h4" component="div">
+            {price}$
           </Typography>
-        </CardContent>
+         
         </Link>
       </CardActionArea>
+        </CardContent>
     
     </Card>
   );

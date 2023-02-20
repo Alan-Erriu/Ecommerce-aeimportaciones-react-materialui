@@ -1,9 +1,9 @@
-import Banner from "./banner/Banner"
+import BannerHome from "./banner/BannerHome"
 import CardsHome from "./homeItems/CardsHome"
 const Home = () => {
   return (
     <div>
-        <Banner/>
+        <BannerHome/>
         <CardsHome/>
        
     </div>

@@ -1,8 +1,9 @@
-import Card from "./Cards/Card"
+import SeccionCard from "./seccionsItems/SeccionCard"
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { StateContex } from "../components/contex/CartContex";
 import { useContext } from "react";
+import BannerSeccions from "./banner/BannerSeccions"
 
 const MousesPage = () => {
   const [state, dispatch] = useContext(StateContex);
@@ -11,6 +12,8 @@ const MousesPage = () => {
  const mouses = products.filter(mouses=> mouses.type ==="Mouses")
 
   return (
+    <>
+    <BannerSeccions/>
     <Box sx={{ marginTop: "7rem" }}>
       <Grid
         container
@@ -36,7 +39,7 @@ const MousesPage = () => {
           alignItems: "center",
           xs: "colunm",
         }}>
-                <Card key={product.id} product={product} />
+                <SeccionCard key={product.id} product={product} />
               </Box>
             </Grid>
           ))}
@@ -44,6 +47,7 @@ const MousesPage = () => {
      
       </Grid>
     </Box>
+    </>
   );
 };
 
