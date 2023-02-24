@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+    
+    
+}
+body{
+    background-color:rgb(234, 239, 236);
+}
+
+
+
+@media all and (max-width: 600px){
+.itemCard{
+flex-direction: column; 
+justify-content: space-around;
+;
+
+
+}
+.itemCardActions{
+flex-direction: column;
+
+}
+}
+

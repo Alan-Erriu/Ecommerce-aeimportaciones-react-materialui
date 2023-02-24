@@ -5,43 +5,80 @@ import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import DeleteIcon from "@mui/icons-material/Delete";
 import { TYPES } from "../reducer/recducer";
 import { useContext } from "react";
 import { StateContex } from "../contex/CartContex";
-import { height } from "@mui/system";
+import RemoveIcon from "@mui/icons-material/Remove";
+import AddIcon from "@mui/icons-material/Add";
+import "../assets/index.css";
 
-export default function ItemCart({ item: { product, type, img, price,quantity,id } }) {
+export default function ItemCart({
+  item: { product, type, img, price, quantity, id },
+}) {
   const [state, dispatch] = useContext(StateContex);
 
   const delFromCart = (all = false) => {
-
-    if (all = false) {
+    if ((all = false)) {
       dispatch({ type: TYPES.REMOVE_ALL_FROM_CART, payload: id });
     } else {
       dispatch({ type: TYPES.REMOVE_ONE_FROM_CART, payload: id });
     }
   };
+  const addToCart = () => {
+    dispatch({ type: TYPES.ADD_TO_CART, payload: id });
+  };
 
   return (
-    <Card className="card" sx={{ width: 345, height:500}}>
-      <CardContent>
-      <CardHeader title={product} subheader={type} />
-      <CardMedia component="img" height="250" image={img} alt="zapatilla" />
-      <CardActions disableSpacing>
-        <IconButton onClick={delFromCart}>
-          <DeleteIcon />
-        </IconButton>
-        <Typography variant="body2" color="green">
-          {price}
-           
-        </Typography>
-        <Typography variant="body4" color="text.secondary">
-        { `X ${quantity}` }
-           
-        </Typography>
-      </CardActions>
+    <Card
+      // La clase esta en la carpeta assets/style => es para hacer la carta responsive
+      className="itemCard"
+      sx={{
+        width: { xs: "100%", sm: "100%", md: "75%", lg: "50%", xl: "50%" },
+        height: {
+          xs: "500px",
+          sm: "150px",
+          md: "150px",
+          lg: "150px",
+          xl: "150px",
+        },
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+      }}
+    >
+      <CardContent
+        sx={{
+          display: "flex",
+          height: "150px",
+          justifyContent: "center",
+        }}
+      >
+        <CardMedia
+          
+          sx={{ objectFit: "contain",height:{xs:200, sm:"100%"} }}
+          component="img"
+          image={img}
+          alt="zapatilla"
+        />
       </CardContent>
+
+      <CardHeader sx={{flexGrow:1, textAlign:"center"}} title={product} />
+      <CardActions className="itemCardActions">
+        <Typography sx={{flexGrow:1}} variant="h5" color="green">
+          {`   $${quantity * price}`}
+        </Typography>
+        <CardActions sx={{flexGrow:1}}>
+          <IconButton onClick={delFromCart}>
+            <RemoveIcon />
+          </IconButton>
+          <Typography variant="h5" color="dark">
+            {quantity}
+          </Typography>
+          <IconButton onClick={addToCart}>
+            <AddIcon />
+          </IconButton>
+        </CardActions>
+      </CardActions>
     </Card>
   );
 }

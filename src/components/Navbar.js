@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import logo from "../assets/logo.jpg";
+import logo from "./assets/logo.jpg";
 import { Avatar, Badge } from "@mui/material";
 import { Link } from "react-router-dom";
 import { StateContex } from "./contex/CartContex";
