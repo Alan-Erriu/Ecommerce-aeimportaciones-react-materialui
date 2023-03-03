@@ -4,13 +4,14 @@ import { initialState } from "../reducer/recducer";
 
 export const StateContex = createContext();
 
-export const StateProvider=({children}) =>{
-    const [state, dispatch] = useReducer(reducer, initialState);
-    
-    return(
-    <StateContex.Provider value={[state,dispatch]}>
-        {children}
-    </StateContex.Provider>)
-}
+export const StateProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
 
-export const useStateValue=()=>useContext(StateContex)
+  return (
+    <StateContex.Provider value={[state, dispatch]}>
+      {children}
+    </StateContex.Provider>
+  );
+};
+
+export const useStateValue = () => useContext(StateContex);

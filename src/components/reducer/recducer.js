@@ -153,16 +153,9 @@ export const initialState = {
   //-------------------------- offers-----------------------------------------------------------------
   offers: [
     {
-      id: 91,
-      product: "Accesorios",
-      img: "https://i0.wp.com/noaweb.com.ar/wp-content/uploads/2021/05/1616513651dc787e32dc096ea2f18a13b767409408.jpg?fit=1024%2C1024&ssl=1",
-      price: "2.000",
-      link: "/accesorios",
-    },
-    {
       id: 92,
       product: "Mouses",
-      img: "https://smarts.com.ar/media/catalog/product/cache/e2fffb2b85fe85187f9dedbb6434d061/m/9/m908-impact_ok.jpg",
+      img: "https://tienda.starware.com.ar/wp-content/uploads/2021/07/mouse-gamer-profesional-g5-6d-usb-pro-gamer-3200dpi-led-7-colores-2324-3906.jpg",
       price: "2.000",
       link: "/mouses",
     },
@@ -172,6 +165,13 @@ export const initialState = {
       img: "https://hard-digital.com.ar/public/files/Teclado%20Razer%20Blackwidow%20V3%20Mecanico%20Black%20Switch%20Green/2.webp",
       price: "3.000",
       link: "/teclados",
+    },
+    {
+      id: 91,
+      product: "Accesorios",
+      img: "https://i0.wp.com/noaweb.com.ar/wp-content/uploads/2021/05/1616513651dc787e32dc096ea2f18a13b767409408.jpg?fit=1024%2C1024&ssl=1",
+      price: "2.000",
+      link: "/accesorios",
     },
   ],
 };

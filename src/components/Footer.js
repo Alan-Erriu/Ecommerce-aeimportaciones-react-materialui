@@ -9,11 +9,14 @@ import { GitHub, LinkedIn } from "@mui/icons-material";
 
 export default function GuestFooter() {
   return (
-    
-    <Paper 
-    sx={{marginTop: "280px" }} component="footer" square variant="outlined"
+    <Paper
+      sx={{ marginTop: "280px" }}
+      component="footer"
+      square
+      variant="outlined"
+      
     >
-    <Container maxWidth="lg">
+      <Container maxWidth="lg">
         <Box
           sx={{
             flexGrow: 1,
@@ -51,6 +54,5 @@ export default function GuestFooter() {
         </Box>
       </Container>
     </Paper>
-    
   );
 }

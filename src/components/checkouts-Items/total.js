@@ -1,10 +1,4 @@
-import {
-  Box,
-  Button,
-  CardContent,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Box, Button, CardContent, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
 import { useContext } from "react";
 import { StateContex } from "../contex/CartContex";
@@ -30,7 +24,6 @@ const Total = () => {
       }}
     >
       <Card
-      
         sx={{
           width: { xs: "100%", sm: "100%", md: "75%", lg: "50%", xl: "50%" },
           height: 100,
@@ -47,10 +40,11 @@ const Total = () => {
             flexDirection: "column",
           }}
         >
-          <Typography variant="h4">Total: ${getTotal.toFixed(3)}</Typography>
+          <Typography variant="h4" fontFamily="fantasy" color="green">
+            TOTAL: ${getTotal.toFixed(3)}
+          </Typography>
           <Button
             sx={{
-              
               ":hover": {
                 bgcolor: "success.main",
               },

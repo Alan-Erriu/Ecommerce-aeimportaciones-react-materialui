@@ -18,7 +18,7 @@ import { StateContex } from "./contex/CartContex";
 import { useContext } from "react";
 
 function ResponsiveAppBar() {
-  const [state, dispatch] = useContext(StateContex);
+  const [state] = useContext(StateContex);
   const { cart } = state;
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -52,7 +52,7 @@ function ResponsiveAppBar() {
               <Avatar
                 alt="ae.importaciones"
                 src={logo}
-                sx={{ width: 56, height: 56 }}
+                sx={{ width: 50, height: 50 }}
               />
             </Typography>
           </Link>
@@ -85,7 +85,7 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
-{/* -------------------------------------links mode toggle--------------------------------------------------- */}
+              {/* -------------------------------------links mode toggle--------------------------------------------------- */}
               <MenuItem onClick={handleCloseNavMenu}>
                 <MenuItem component={Link} to={"/"}>
                   Home
@@ -112,7 +112,7 @@ function ResponsiveAppBar() {
                 </MenuItem>
               </MenuItem>
             </Menu>
-{/* ------------------------------------------------------------------------------------------------------------- */}
+            {/* ------------------------------------------------------------------------------------------------------------- */}
           </Box>
           <Typography
             variant="h5"
@@ -130,9 +130,9 @@ function ResponsiveAppBar() {
           >
             <Link to="/">
               <Avatar
-                alt="Remy Sharp"
+                alt="ae importaciones"
                 src={logo}
-                sx={{ width: 56, height: 56 }}
+                sx={{ width: 45, height: 45 }}
               />
             </Link>
           </Typography>
@@ -164,19 +164,13 @@ function ResponsiveAppBar() {
           </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="carrito">
-              
-                  <Link
-                    to="/carrito"
-                    style={{ textDecoration: "none" }}
-                  >
+              <Link to="/carrito" style={{ textDecoration: "none" }}>
                 <Badge badgeContent={cart?.length} color="secondary">
-                    <Button color="success">
-
+                  <Button color="success">
                     <ShoppingCartIcon />
-                    </Button>
+                  </Button>
                 </Badge>
-                  </Link>
-              
+              </Link>
             </Tooltip>
           </Box>
         </Toolbar>
