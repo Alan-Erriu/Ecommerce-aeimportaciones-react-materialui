@@ -14,7 +14,7 @@ function App() {
       <StateProvider>
         <Navbar />
         
-         <Routes basename="/">
+         <Routes >
           <Route exact path="/" element={<Home />} />
           <Route  path="/teclados" element={<KeyboardsPage />} />
           <Route  path="/mouses" element={<MousesPage/>} />

@@ -11,7 +11,7 @@ export default function GuestFooter() {
   return (
     
     <Paper 
-    sx={{marginTop: '250px', bottom: 0}} component="footer" square variant="outlined"
+    sx={{marginTop: "280px" }} component="footer" square variant="outlined"
     >
     <Container maxWidth="lg">
         <Box

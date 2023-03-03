@@ -9,7 +9,7 @@ export default function Cards() {
     const [state, dispatch] = useContext(StateContex);
     const { offers } = state;
   return (
-    <Box sx={{ marginTop: "7rem", alignItems:"center", justifyContent:"center" }}>
+    <Box sx={{ marginTop: "12rem", alignItems:"center", justifyContent:"center", }}>
       <Grid
         container
         rowSpacing={2}
@@ -21,10 +21,10 @@ export default function Cards() {
             offert={offert}
             item
             xs={12}
-            sm={6}
-            md={4}
-            lg={4}
-            xl={4}
+            sm={12}
+            md={12}
+            lg={12}
+            xl={12}
           >
             <Box sx={{
         width: "100%",

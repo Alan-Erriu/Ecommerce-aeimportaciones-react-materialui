@@ -27,47 +27,47 @@ export default function ItemCart({
   const addToCart = () => {
     dispatch({ type: TYPES.ADD_TO_CART, payload: id });
   };
-
+const total=quantity * price
   return (
-    <Card
-      // La clase esta en la carpeta assets/style => es para hacer la carta responsive
-      className="itemCard"
-      sx={{
-        width: { xs: "100%", sm: "100%", md: "75%", lg: "50%", xl: "50%" },
-        height: {
-          xs: "500px",
-          sm: "150px",
-          md: "150px",
-          lg: "150px",
-          xl: "150px",
-        },
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-      }}
-    >
+    // La clase esta en la carpeta assets/style => es para hacer la carta responsive
+    <Card 
+    className="itemCard"
+    sx={{
+      width: { xs: "100%", sm: "100%", md: "75%", lg: "50%", xl: "50%" },
+      height: {
+        xs: "500px",
+        sm: "150px",
+        md: "150px",
+        lg: "150px",
+        xl: "150px",
+      },
+      display: "flex",
+      
+      justifyContent: "space-between",
+    }}
+         >
       <CardContent
         sx={{
           display: "flex",
           height: "150px",
           justifyContent: "center",
         }}
-      >
-        <CardMedia
-          
-          sx={{ objectFit: "contain",height:{xs:200, sm:"100%"} }}
+        >
+          <CardMedia
+          sx={{ objectFit: "contain", height: { xs: 200, sm: "100%" } }}
           component="img"
           image={img}
           alt="zapatilla"
-        />
+          />
       </CardContent>
 
-      <CardHeader sx={{flexGrow:1, textAlign:"center"}} title={product} />
+      <CardHeader  sx={{ textAlign: "center" }} title={product} />
+          
       <CardActions className="itemCardActions">
-        <Typography sx={{flexGrow:1}} variant="h5" color="green">
-          {`   $${quantity * price}`}
+        <Typography variant="h5" color="green">
+          {total.toFixed(3)}
         </Typography>
-        <CardActions sx={{flexGrow:1}}>
+        <CardActions>
           <IconButton onClick={delFromCart}>
             <RemoveIcon />
           </IconButton>
@@ -79,6 +79,6 @@ export default function ItemCart({
           </IconButton>
         </CardActions>
       </CardActions>
-    </Card>
+    </Card >
   );
 }

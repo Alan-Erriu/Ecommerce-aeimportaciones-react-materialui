@@ -13,8 +13,8 @@ const AccessoriesPage = () => {
 
   return (
     <>
-    <BannerSeccions/>
-    <Box sx={{ marginTop: "7rem" }}>   
+    {/* <BannerSeccions/> */}
+    <Box sx={{ marginTop: "15rem" }}>   
       <Grid
         container
         rowSpacing={2}

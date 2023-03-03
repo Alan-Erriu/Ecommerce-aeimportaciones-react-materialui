@@ -13,50 +13,51 @@ import { useContext } from "react";
 import { Button } from "@mui/material";
 
 export default function RecipeReviewCard({
-  product: { id, product, type, img, price },
+  product: { id, product, type, img, price, material, connect, leds, model },
 }) {
   const [state, dispatch] = useContext(StateContex);
 
   const addToCart = () => {
     dispatch({ type: TYPES.ADD_TO_CART, payload: id });
   };
+
   return (
-    <Card sx={{ width: 345, height: 600 }}>
+    <Card sx={{ width: 345, height: 700 }}>
       <CardHeader title={product} subheader={type} />
 
       <CardContent>
-        <CardMedia component="img" height="250" image={img} alt="zapatilla" />
-        <Typography variant="body1" color="text.primary">
-          Lo que tenes que saber de este producto:
+        <CardMedia component="img" height="250" image={img} alt="" />
+        <Typography variant="h5" color="text.primary">
+          Caracteristicas:
         </Typography>
-        <Typography variant="body1" color="text.primary">
+
+        <Typography variant="body1" color="-moz-initial">
           <br />
-          Tipo de teclado: membrana.
+          Serie: {model}
           <br />
-          Con conector USB 2.0.
-          <br />
-          Luces led: No
+          Modelo: {material} <br />
+          Conexión: {connect} <br />
+          Luces Led: {leds} <br />
         </Typography>
 
         <Typography variant="body1" color="green">
-          {price}
+          ${price}
         </Typography>
-        <CardActions disableSpacing>
-          
-            <Button
+        <CardActions>
+          <Button
             onClick={addToCart}
             sx={{
-              ':hover': {
-                bgcolor: 'success.main', // theme.palette.primary.main
-                
+              flexGrow: "1",
+              ":hover": {
+                bgcolor: "success.main",
               },
             }}
-            startIcon={<AddShoppingCartIcon/>} 
+            startIcon={<AddShoppingCartIcon />}
             variant="contained"
-             color="primary">
-              SUMAR AL CARRITO
-            </Button>
-          
+            color="primary"
+          >
+            SUMAR AL CARRITO
+          </Button>
         </CardActions>
       </CardContent>
     </Card>

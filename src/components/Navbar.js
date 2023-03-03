@@ -85,6 +85,7 @@ function ResponsiveAppBar() {
                 display: { xs: "block", md: "none" },
               }}
             >
+{/* -------------------------------------links mode toggle--------------------------------------------------- */}
               <MenuItem onClick={handleCloseNavMenu}>
                 <MenuItem component={Link} to={"/"}>
                   Home
@@ -92,7 +93,17 @@ function ResponsiveAppBar() {
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
                 <MenuItem component={Link} to={"/teclados"}>
-                  Productos
+                  Teclados
+                </MenuItem>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem component={Link} to={"/mouses"}>
+                  Mouses
+                </MenuItem>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <MenuItem component={Link} to={"/accesorios"}>
+                  Accesorios
                 </MenuItem>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu}>
@@ -101,6 +112,7 @@ function ResponsiveAppBar() {
                 </MenuItem>
               </MenuItem>
             </Menu>
+{/* ------------------------------------------------------------------------------------------------------------- */}
           </Box>
           <Typography
             variant="h5"

@@ -18,18 +18,18 @@ const CartIsEmpty = () => {
       
     }}
     >
-        <Typography align="center" gutterBottom variant="h4">
+        <Typography align="center" gutterBottom variant="h4" color="white">
        No hay productos en el carrito
         </Typography>
         <Link to={"/"} style={{textDecoration: 'none'}}>
         <Button 
        sx={{
         ':hover': {
-          bgcolor: 'success.main', 
+          bgcolor: 'primary.main', 
           
         },
       }}
-        variant="contained" color="primary">Seguir comprando</Button>
+        variant="contained" color="success">Seguir comprando</Button>
         </Link>
     </Box>
   )

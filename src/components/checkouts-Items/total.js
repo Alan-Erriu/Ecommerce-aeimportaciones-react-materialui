@@ -47,9 +47,10 @@ const Total = () => {
             flexDirection: "column",
           }}
         >
-          <Typography variant="h4">Total: ${getTotal}</Typography>
+          <Typography variant="h4">Total: ${getTotal.toFixed(3)}</Typography>
           <Button
             sx={{
+              
               ":hover": {
                 bgcolor: "success.main",
               },

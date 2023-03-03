@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import { StateContex } from "../components/contex/CartContex";
 import { useContext } from "react";
 import BannerSeccions from "./banner/BannerSeccions"
+import Typography from '@mui/material/Typography'
 
 
 
@@ -17,8 +18,9 @@ export const KeyboardsPage = () => {
 
   return (
     <>
-    <BannerSeccions/>
-    <Box sx={{ marginTop: "7rem" }}>
+    {/* <BannerSeccions/> */}
+    <Box sx={{ marginTop: "15rem" }}>
+    <Typography variant="h2" color="white" textAlign="center">Los mejores teclados papa!</Typography>
       <Grid
         container
         rowSpacing={2}

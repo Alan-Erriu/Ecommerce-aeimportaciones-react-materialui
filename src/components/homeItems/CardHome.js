@@ -10,7 +10,7 @@ export default function MultiActionAreaCard({
     offert: { id, product, img, price,link }
 }) {
   return (
-    <Card sx={{ width:450 ,height: 420, marginTop: 10}}>
+    <Card sx={{ width:450 ,height: 420, marginTop: 10,}}>
           <CardContent>
       <CardActionArea>
         <Link to={link} style={{textDecoration: 'none'}}>
