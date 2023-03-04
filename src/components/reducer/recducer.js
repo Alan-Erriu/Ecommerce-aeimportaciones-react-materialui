@@ -18,7 +18,7 @@ export const initialState = {
       id: 2,
       product: "Teclado Razer",
       type: "Teclados",
-      img: "https://hard-digital.com.ar/public/files/Teclado%20Razer%20Blackwidow%20V3%20Mecanico%20Black%20Switch%20Green/2.webp",
+      img: "http://cdn.shopify.com/s/files/1/0577/6238/1867/products/1644619412.jpg?v=1667890315",
       model: "BLACKWIDOW V3 ",
       material: "Mecanico",
       connect: "USB 2.0",
@@ -162,7 +162,7 @@ export const initialState = {
     {
       id: 93,
       product: "Teclados",
-      img: "https://hard-digital.com.ar/public/files/Teclado%20Razer%20Blackwidow%20V3%20Mecanico%20Black%20Switch%20Green/2.webp",
+      img: "https://mexx-img-2019.s3.amazonaws.com/40716_6.jpeg",
       price: "3.000",
       link: "/teclados",
     },

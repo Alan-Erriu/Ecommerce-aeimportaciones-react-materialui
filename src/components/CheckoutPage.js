@@ -7,7 +7,7 @@ import { StateContex } from "./contex/CartContex";
 import CartIsEmpty from "./checkouts-Items/CartIsEmpty";
 
 export default function CheckoutPage() {
-  const [state] = useContext(StateContex);
+  const [state,dispatch] = useContext(StateContex);
   const { cart } = state;
 
   if (cart.length > 0) {

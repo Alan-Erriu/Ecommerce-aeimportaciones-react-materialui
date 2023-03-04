@@ -18,7 +18,7 @@ import { StateContex } from "./contex/CartContex";
 import { useContext } from "react";
 
 function ResponsiveAppBar() {
-  const [state] = useContext(StateContex);
+  const [state,dispatch] = useContext(StateContex);
   const { cart } = state;
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);

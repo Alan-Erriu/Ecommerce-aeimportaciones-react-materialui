@@ -5,7 +5,7 @@ import { StateContex } from "../components/contex/CartContex";
 import { useContext } from "react";
 
 const MousesPage = () => {
-  const [state] = useContext(StateContex);
+  const [state,dispatch] = useContext(StateContex);
   const { products } = state;
 
   const mouses = products.filter((mouses) => mouses.type === "Mouses");

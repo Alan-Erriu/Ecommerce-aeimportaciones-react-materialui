@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { StateContex } from "../contex/CartContex";
 
 const Total = () => {
-  const [state] = useContext(StateContex);
+  const [state,dispatch] = useContext(StateContex);
   const { cart } = state;
 
   const getTotal = cart.reduce(

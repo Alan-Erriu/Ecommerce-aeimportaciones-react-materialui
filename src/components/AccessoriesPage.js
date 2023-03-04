@@ -5,7 +5,7 @@ import { StateContex } from "../components/contex/CartContex";
 import { useContext } from "react";
 
 const AccessoriesPage = () => {
-  const [state] = useContext(StateContex);
+  const [state,dispatch] = useContext(StateContex);
   const { products } = state;
 
   const accessories = products.filter((item) => item.type === "Accesorios");

@@ -5,7 +5,7 @@ import { StateContex } from "../components/contex/CartContex";
 import { useContext } from "react";
 
 export const KeyboardsPage = () => {
-  const [state] = useContext(StateContex);
+  const [state,dispatch] = useContext(StateContex);
   const { products } = state;
 
   const keyboards = products.filter(

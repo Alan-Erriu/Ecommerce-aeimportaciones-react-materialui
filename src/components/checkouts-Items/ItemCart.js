@@ -15,7 +15,7 @@ import "../assets/index.css";
 export default function ItemCart({
   item: { product, type, img, price, quantity, id },
 }) {
-  const [dispatch] = useContext(StateContex);
+  const [state,dispatch] = useContext(StateContex);
 
   const delFromCart = (all = false) => {
     if ((all = false)) {

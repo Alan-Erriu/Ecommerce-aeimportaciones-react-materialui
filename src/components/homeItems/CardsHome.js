@@ -5,7 +5,7 @@ import { StateContex } from "../contex/CartContex";
 import { useContext } from "react";
 
 export default function Cards() {
-  const [state] = useContext(StateContex);
+  const [state,dispatch] = useContext(StateContex);
   const { offers } = state;
   return (
     <Box

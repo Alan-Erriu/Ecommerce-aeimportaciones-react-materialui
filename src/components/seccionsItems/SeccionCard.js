@@ -14,7 +14,7 @@ import { Button } from "@mui/material";
 export default function RecipeReviewCard({
   product: { id, product, type, img, price, material, connect, leds, model },
 }) {
-  const [dispatch] = useContext(StateContex);
+  const [state,dispatch] = useContext(StateContex);
 
   const addToCart = () => {
     dispatch({ type: TYPES.ADD_TO_CART, payload: id });
