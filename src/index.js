@@ -29,7 +29,7 @@ root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <BrowserRouter basename="/Ecommerce--comision--0522TM">
+      <BrowserRouter basename="/Ecommerce-aeimportaciones-react-materialui">
         <App />
       </BrowserRouter>
     </ThemeProvider>

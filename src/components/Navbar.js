@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import logo from "./assets/logo.jpg";
+import LogoAE from "../components/assets/LogoAe"
 import { Avatar, Badge } from "@mui/material";
 import { Link } from "react-router-dom";
 import { StateContex } from "./contex/CartContex";
@@ -49,11 +49,7 @@ function ResponsiveAppBar() {
                 textDecoration: "none",
               }}
             >
-              <Avatar
-                alt="ae.importaciones"
-                src={logo}
-                sx={{ width: 50, height: 50 }}
-              />
+             <LogoAE />
             </Typography>
           </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -129,11 +125,7 @@ function ResponsiveAppBar() {
             }}
           >
             <Link to="/">
-              <Avatar
-                alt="ae importaciones"
-                src={logo}
-                sx={{ width: 45, height: 45 }}
-              />
+            <LogoAE />
             </Link>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>

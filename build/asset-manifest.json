@@ -1,17 +1,15 @@
 {
   "files": {
-    "main.css": "/Ecommerce--comision--0522TM/static/css/main.1d4e7b50.css",
-    "main.js": "/Ecommerce--comision--0522TM/static/js/main.f8d4e2cf.js",
-    "static/js/787.1e2b66a9.chunk.js": "/Ecommerce--comision--0522TM/static/js/787.1e2b66a9.chunk.js",
-    "static/media/background.png": "/Ecommerce--comision--0522TM/static/media/background.3e88016c7c318bb71fa7.png",
-    "static/media/logo.jpg": "/Ecommerce--comision--0522TM/static/media/logo.c2630057a2659fd3c2fa.jpg",
-    "index.html": "/Ecommerce--comision--0522TM/index.html",
-    "main.1d4e7b50.css.map": "/Ecommerce--comision--0522TM/static/css/main.1d4e7b50.css.map",
-    "main.f8d4e2cf.js.map": "/Ecommerce--comision--0522TM/static/js/main.f8d4e2cf.js.map",
-    "787.1e2b66a9.chunk.js.map": "/Ecommerce--comision--0522TM/static/js/787.1e2b66a9.chunk.js.map"
+    "main.css": "/Ecommerce-aeimportaciones-react-materialui/static/css/main.9e9692ff.css",
+    "main.js": "/Ecommerce-aeimportaciones-react-materialui/static/js/main.f90b6382.js",
+    "static/js/787.1e2b66a9.chunk.js": "/Ecommerce-aeimportaciones-react-materialui/static/js/787.1e2b66a9.chunk.js",
+    "index.html": "/Ecommerce-aeimportaciones-react-materialui/index.html",
+    "main.9e9692ff.css.map": "/Ecommerce-aeimportaciones-react-materialui/static/css/main.9e9692ff.css.map",
+    "main.f90b6382.js.map": "/Ecommerce-aeimportaciones-react-materialui/static/js/main.f90b6382.js.map",
+    "787.1e2b66a9.chunk.js.map": "/Ecommerce-aeimportaciones-react-materialui/static/js/787.1e2b66a9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d4e7b50.css",
-    "static/js/main.f8d4e2cf.js"
+    "static/css/main.9e9692ff.css",
+    "static/js/main.f90b6382.js"
   ]
 }

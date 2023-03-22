@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url(background.png);
+  background-image: url("https://raw.githubusercontent.com/Alan-Erriu/Ecommerce-aeimportaciones-react-materialui/master/src/components/assets/background.png");
   background-position: center;
   background-attachment: contain;
   background-size: cover;
