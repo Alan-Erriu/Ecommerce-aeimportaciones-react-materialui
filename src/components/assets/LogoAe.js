@@ -1,11 +1,12 @@
 import { Avatar } from '@mui/material'
+import logo from "../assets/logo.jpg"
 
 
 const LogoAE = () => {
   return (
     <Avatar
     alt="ae.importaciones"
-    src="https://raw.githubusercontent.com/Alan-Erriu/Ecommerce--comision--0522TM/master/src/components/assets/logo.jpg"
+    src={logo}
     sx={{ width: 50, height: 50 }}
   />
   )
